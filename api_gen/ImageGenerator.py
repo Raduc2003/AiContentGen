@@ -1,6 +1,6 @@
 import requests
-import Gen1
-import Gen2
+import api_gen.Gen1 as Gen1
+import api_gen.Gen2 as Gen2
 prompt = "car"
 def generate_image():
     response =Gen2.generator2(prompt)
