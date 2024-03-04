@@ -1,6 +1,10 @@
 import requests
 import base64
 import os
+# import the promptGen function from the LLM module
+from ..LLM.promptGen import promptGen
+
+
 # Define the URL and the payload to send.
 url = "http://127.0.0.1:7860"
 
