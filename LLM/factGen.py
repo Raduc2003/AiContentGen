@@ -1,5 +1,5 @@
 import requests
-def factGen():
+def factGenerate():
   url = "http://127.0.0.1:1337"
   header = {
       "Content-Type": "application/json"

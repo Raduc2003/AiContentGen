@@ -2,7 +2,7 @@ import requests
 import base64
 import os
 # import the promptGen function from the LLM module
-from ..LLM.promptGen import promptGen
+from LLM.promptGen import generate
 
 
 # Define the URL and the payload to send.
@@ -14,7 +14,7 @@ if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
 #prompts will be imported from gui in future
-prompts = ["dog","cat","tiger","monkey"]
+prompts = generate()
 
 def generateUniqueNames(folderPath,fileName):
     counter= 1

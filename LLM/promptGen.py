@@ -1,7 +1,11 @@
-from factGen import factGen
+from LLM.factGen import factGenerate
 import requests
-def promptGen():
-    text = factGen()
+def textToArray(text):
+    text = text[1:-1]
+    l =[x[1:-1] for x in text.split(",\n")]
+    return l
+def generate():
+    text = factGenerate()
     url = "http://127.0.0.1:1337"
     header = {
       "Content-Type": "application/json"
@@ -41,11 +45,13 @@ def promptGen():
             result = response.json()
 
             resp = result['choices'][0]['message']['content']
-            # print(resp)
+            print(resp)
+            resp = textToArray(resp)
+            print(resp)
         except KeyError:
             print("The expected keys were not found in the response.")
         
     else:
         print(f"Request failed with status code: {response.status_code}")
     return resp
-print(promptGen())
+# print(promptGen())
