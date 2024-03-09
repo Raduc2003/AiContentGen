@@ -38,7 +38,7 @@ def copy_file():
     else:
         print("No matching files found to copy.")
 def generate_audio():
-    message ="Hello Robi "
+    message ="This is a test prompt with a long text to see how the text is displayed in the video"
 
     # Here you would collect additional details as per your requirement
     # For demonstration, using a fixed voice and clean text flag
