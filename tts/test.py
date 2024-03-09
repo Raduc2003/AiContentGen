@@ -1,6 +1,6 @@
 import requests
-import shutil
-import os
+import time
+
 VOICE_SERVER_ADDR = "localhost"
 VOICE_SERVER_PORT = 7332
 
@@ -8,27 +8,37 @@ VOICE_SERVER_PORT = 7332
 SOURCE_DIR = "C:/Users/carac/OnlySpeakTTS/audio"
 DESTINATION_DIR = "C:/Users/carac/Documents/StableDiff/webUI/stable-diffusion-webui/AiContentGen/output_sound"
 def copy_file():
+    import shutil
+    import os
+    time.sleep(3)
     # List all files in SOURCE_DIR that match the criteria
-    files = [f for f in os.listdir(SOURCE_DIR) if f.startswith("clip") and f.endswith(".wav")]
+    files = [f for f in os.listdir(SOURCE_DIR) if f.endswith(".wav") ]
+    print(files)
     
     # Sort files to get the last one alphabetically
     files.sort()
-    
+   
     if files:
         # The last file in sorted order
         file_name = files[-1]
         
         source_path = os.path.join(SOURCE_DIR, file_name)
         destination_path = os.path.join(DESTINATION_DIR, file_name)
+
         
         # Copy the file
-        shutil.copy2(source_path, destination_path)
+        
+        #waits for the file to be created
+        shutil.copyfile(source_path, destination_path)
+
+        
+        print("Copied file.")
         
         print(f"Copied {file_name} from {SOURCE_DIR} to {DESTINATION_DIR}")
     else:
         print("No matching files found to copy.")
 def generate_audio():
-    message ="Hello my dear friend Iordy"
+    message ="Hello Robi "
 
     # Here you would collect additional details as per your requirement
     # For demonstration, using a fixed voice and clean text flag
@@ -46,7 +56,6 @@ def generate_audio():
         # Assuming the server responds with the name or relative path of the generated file
         # generated_file_name = response.json().get("file_name")
 
-        copy_file()
         print(response.text)
     else:
         print("Error: Request failed.")
