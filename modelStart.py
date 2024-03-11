@@ -5,3 +5,4 @@ def startModels():
     os.startfile("webui-user.bat")
     os.chdir("C:/Users/carac/OnlySpeakTTS")
     os.startfile("run.bat")
+    return 1
