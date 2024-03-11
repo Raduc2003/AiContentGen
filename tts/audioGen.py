@@ -37,8 +37,7 @@ def copy_file():
         print(f"Copied {file_name} from {SOURCE_DIR} to {DESTINATION_DIR}")
     else:
         print("No matching files found to copy.")
-def generate_audio():
-    message ="This is a test prompt with a long text to see how the text is displayed in the video"
+def generate_audio(message):
 
     # Here you would collect additional details as per your requirement
     # For demonstration, using a fixed voice and clean text flag

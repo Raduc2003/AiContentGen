@@ -8,7 +8,7 @@ def factGenerate():
   payload = {
     "messages": [
       {
-    "content": "Generate a series of engaging and diverse random facts covering a wide range of topics (at most 4). Each fact should be concise yet informative, tailored to captivate a TikTok audience within a 45-second video script. Structure the output to include a captivating introduction, a seamless transition between facts, and a memorable closing. Ensure each fact is presented with clarity and enthusiasm to maintain viewer interest throughout the video. Aim for a balance between educational content and entertainment value, making each fact resonate with a broad audience. Adapt the complexity and depth of information to suit a general viewership, focusing on surprising, thought-provoking, or humorous elements that enhance shareability and engagement.Very IMPORTANT!!! respond with such response when receiveing ' make one' prompt.Respond with ONLY the facts separated only with identation",
+    "content": "Generate four distinct and captivating facts, each under 20 words, spanning various subjects. Aim for brevity and intrigue, suitable for quick social media engagement. Focus on ensuring each fact stands alone for impact, with clear, attention-grabbing content that sparks curiosity or amusement. Prioritize simplicity and shareability, appealing to a broad audience's interests.Very IMPORTANT!!! respond with such response when receiveing ' make one' prompt.Respond with ONLY the facts separated only with identation",
     "role": "system"
       },
       

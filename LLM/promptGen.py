@@ -4,8 +4,8 @@ def textToArray(text):
     text = text[1:-1]
     l =[x[1:-1] for x in text.split(",\n")]
     return l
-def generate():
-    text = factGenerate()
+def generate(text):
+    
     url = "http://127.0.0.1:1337"
     header = {
       "Content-Type": "application/json"
@@ -14,7 +14,7 @@ def generate():
     payload = {
       "messages": [
         {
-         "content": "Transform each fact from the text block into a structured array of mini image generation prompts. Each element of the array should consist of a simplified prompt designed to visually represent the corresponding fact. The prompts must specify key elements such as objects, characters, actions, and settings, tailored to encapsulate the essence of the fact in a visually compelling manner. Format the output as a JSON array, where each prompt is encapsulated as a string within double quotes, ensuring easy parsing and consistent structure. This structured format should facilitate the direct use of these prompts for image generation, aiming to enhance understanding and engagement through visual storytelling. The array should be diverse, with each prompt uniquely tailored to the specific fact it represents.",
+         "content": "Convert each fact into an array of straightforward image prompts. Each prompt should include essential elements like subjects, actions, and environments, capturing the fact's core visually. Present the prompts in a JSON array, with each as a concise string. This format should be directly usable for image creation, aiding comprehension through visual representation. Ensure variety and uniqueness across the prompts to reflect the diverse nature of the facts.",
          "role": "system"
         }
 
